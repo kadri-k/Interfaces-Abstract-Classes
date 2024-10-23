@@ -7,7 +7,6 @@ public class Aeroplane extends Vehicle implements Flyable {
     }
 
     public void move() {
-        System.out.println("Aeroplane is moving..... .");
         fly();
     }
 }

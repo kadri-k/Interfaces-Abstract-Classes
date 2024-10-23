@@ -1,15 +1,37 @@
-import com.Northcoders.Aeroplane;
-import com.Northcoders.Car;
+import com.Northcoders.*;
+
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Main started......");
 
-        Car myCar = new Car();
-        myCar.move();
+                List<Object> objects = List.of(
+                        new Aeroplane(),
+                        new Car(),
+                        new Pigeon(),
+                        new Duck(),
+                        new Fish()
+                );
 
-        Aeroplane myAeroplane = new Aeroplane();
-        myAeroplane.move();
+                for (Object object : objects) {
 
-    }
-}
+                    if (object instanceof Swimmable swimmable) {
+                        swimmable.swim();
+                    }
+
+                    if (object instanceof Flyable flyable) {
+                        flyable.fly();
+                    }
+
+                    if (object instanceof Vehicle vehicle) {
+                        vehicle.move();
+                    }
+
+                }
+
+            }
+        }
+
+
+
